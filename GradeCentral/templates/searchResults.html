@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% for result in results %}
+		<h1>{{ result.name }}</h1>
+		<h2>{{ result.title }}</h2>
+		<p>Section: {{ result.section }}</p>
+		<p>Class ID: {{result.id }}</p>
+	{% endfor %}
+{% endblock content %}

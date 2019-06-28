@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="searchBox">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<fieldset>
+				<legend>Search Nigga</legend>
+				<div>
+					{{ form.CLASS.label }}
+					{{ form.CLASS }}
+				</div>
+			</fieldset>
+			<div>
+				{{ form.submit }}
+			</div>
+		</form>
+	</div>
+	<div>
+		<p>Enter the class name, usually in format capital letters followed by course numbers.</p>
+	</div>
+{% endblock content %}
