@@ -12,6 +12,7 @@ header, .full-width {
   background-repeat: no-repeat;
   background-size: 110px 80px;
   background-position: right;
+  text-align: center;
 }
 .wrap {
   width: 80%;
@@ -57,11 +58,15 @@ li a:hover {
 .navbar a {
   float: left;
   font-size: 16px;
-  color: #3045FF;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+.navbar-right {
+  float: right;
 }
 
 .dropdown {
@@ -73,7 +78,7 @@ li a:hover {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: #3045FF;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;;
@@ -81,7 +86,7 @@ li a:hover {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #FAF33C;
+  background-color: #3045FF;
 }
 
 .dropdown-content {
@@ -95,29 +100,19 @@ li a:hover {
 
 .dropdown-content a {
   float: none;
-  color: #3045FF;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #FAF33C;
-}
+.dropdown-content a:hover {background-color: #3045FF;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #FAF33C;}
-
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #FAF33C;}
+.dropdown:hover .dropbtn {background-color: #3045FF;}
 
 .container {
   background-color: #383838;
@@ -125,3 +120,87 @@ li a:hover {
   color: #FAF33C;
   text-align: center;
 }
+
+.logininput, .searchinput, .registerinput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #FAF33C;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.loginsubmit, .searchsubmit, .registersubmit {
+  width: 100%;
+  background-color: #FAF33C;
+  color: #3045FF;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loginsubmit:hover {
+  background-color: #E0DA34;
+}
+
+.searchsubmit:hover {
+  background-color: #E0DA34;
+}
+
+.registersubmit:hover {
+  background-color: #E0DA34;
+}
+
+.login, .search, .register {
+  border-radius: 5px;
+  background-color: #383838;
+  padding: 20px;
+  color: #FAF33C;
+  width: 50%;
+  display: inline-block;
+}
+
+.smalltext {
+  font-size: 12px;
+}
+
+.alert {
+  border-radius: 15px;
+  font-family: "Verdana", Verdana, Sans-serif;
+  padding: 20px;
+  color: white;
+}
+
+.alert.success {
+  background-color: #4CAF50;
+}
+
+.alert.error {
+  background-color: #f44336;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.checkbox {
+}
+
+.checkbox-left{
+  float: left;
+}
+

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% with messages = get_flashed_messages(with_categories=true) %}
+  		{% if messages %}
+    		{% for category, message in messages %}
+      			<div class="alert {{ category }}"> 
+      				{{ message|capitalize }} 
+      				<span class="closebtn">&times;</span>
+      			</div>
+    		{% endfor %}
+  		{% endif %}
+	{% endwith %}
+
+	<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+      }
+    }
+  	</script>
+
+	<div id="indexBody">
+		<h1>what up fam</h1>
+	</div>
+{% endblock content %}

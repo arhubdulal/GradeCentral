@@ -10,7 +10,13 @@
 </header>
 
 <head>
-	<title>nigger</title>
+
+	{% if title %}
+        <title>GradeCenter - {{ title }}</title>
+    {% else %}
+        <title>GradeCenter</title>
+    {% endif %}
+
 	<link rel = "stylesheet" href="{{ url_for('static', filename='css/layout.css')}}">
 	<script type="/script.js"></script>
 </head>
@@ -30,6 +36,12 @@
       <a href="titties">ass</a>
     </div>
     </div>
+
+    <div class="navbar-right">
+      <a href="login">Login</a>
+      <a href="register">Register</a>
+    </div>
+
 	</div>
 
   <div class="container">
