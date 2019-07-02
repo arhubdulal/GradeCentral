@@ -21,14 +21,21 @@ db = SQLAlchemy(app)
 
 #%%
 class User(db.Model):
+    __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
-    
+    _classes = db.Column(db.String, nullable=False, server_default="00000") #IDs
     
     def __repr__(self):
         return f"User('{self.email}')"
     
+    @property
+    def classes(self):
+        return [int(x) for x in self._classes.split(';')]
+    @classes.setter
+    def classes(self, value):
+        self._classes += ';%s' % value
 
 #%%
 @app.route("/")
