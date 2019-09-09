@@ -12,7 +12,7 @@ from gradecentral import app, db, bcrypt
 from gradecentral.forms import searchForm, registerForm, loginForm
 from gradecentral.models import User
 from flask_login import login_user, current_user, logout_user, login_required
-import gradecentral.Parser
+from gradecentral.Parser import htmlString, getResults
 
 #%%
 @app.route("/")
@@ -24,7 +24,7 @@ def home():
 def search():
     form = searchForm()
     if form.validate_on_submit():
-        results = Parser.getResults(Parser.htmlString(form.CLASS.data))
+        results = getResults(htmlString(form.CLASS.data))
         results = [x.json for x in results]
         return render_template("searchResults.html", results=results)
     return render_template("search.html", title='Search', form=form)
