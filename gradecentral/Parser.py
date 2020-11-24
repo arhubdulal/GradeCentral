@@ -3,7 +3,7 @@
 """
 Created on Sun Jun  2 11:21:04 2019
 
-@author: JustinChen
+@author: ArhubDulal
 """
 from bs4 import BeautifulSoup
 import urllib.request
