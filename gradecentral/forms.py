@@ -3,7 +3,6 @@
 """
 Created on Sun Jul  7 23:28:41 2019
 
-@author: JustinChen
 """
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
